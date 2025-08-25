@@ -1,8 +1,8 @@
 const express = require("express")
-const userSignup = require("../Model/Model")
-const { userinput } = require("../Controller/control")
-const homeRouter = express.Router()
+const { handleUserLogin, handleUserSignUp } = require("../Controller/control")
+const userRouter = express.Router()
 
-homeRouter.post( "/", userinput )
+userRouter.get( "/login", handleUserLogin )
+userRouter.post( "/signup", handleUserSignUp )
 
-module.exports = homeRouter
+module.exports = {userRouter}

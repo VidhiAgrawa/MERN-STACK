@@ -5,4 +5,5 @@ const userSignup = mongoose.model( "signupdetail", new mongoose.Schema( {
     password : { type : String }
 } ) )
 
+
 module.exports = userSignup
